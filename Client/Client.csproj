@@ -54,6 +54,7 @@
     <Compile Include="Model\IMovable.cs" />
     <Compile Include="Model\Position.cs" />
     <Compile Include="Model\Projectile.cs" />
+    <Compile Include="Model\Sprite.cs" />
     <Compile Include="Model\Tank.cs" />
     <Compile Include="View\Forms\GameForm.cs">
       <SubType>Form</SubType>
@@ -83,7 +84,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Forms\GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile_73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tileGrass2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

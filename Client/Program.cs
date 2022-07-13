@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.View.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+            Application.Run(new GameForm());
         }
     }
 }

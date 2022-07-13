@@ -1,11 +1,14 @@
-﻿namespace Client.Model
+﻿using System;
+
+namespace Client.Model
 {
     public interface IMovable
     {
-        void Move(int maxX, int maxY);
-        void MoveLeft();
-        void MoveRight();
-        void MoveUp();
-        void MoveDown();
+        event Action<int> CurrentMove;
+        void Move(int maxX, int minX,int maxY, int minY);
+        void MoveLeft(int speed);
+        void MoveRight(int speed);
+        void MoveUp(int speed);
+        void MoveDown(int speed);
     }
 }

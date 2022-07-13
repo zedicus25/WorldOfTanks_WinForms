@@ -9,30 +9,37 @@ namespace Client.Model
 {
     public class Projectile : IMovable
     {
+        public Projectile(Position pos, string id)
+        {
+            Pos = pos;
+        }
+
+        public event Action<int> CurrentMove;
         public Position Pos { get; set; }
         public IDirection Direction { get; private set; }
 
-        public void Move(int maxX, int maxY)
+
+        public void Move(int maxX, int minX, int maxY, int minY)
         {
             throw new NotImplementedException();
         }
 
-        public void MoveDown()
+        public void MoveDown(int speed)
         {
             throw new NotImplementedException();
         }
 
-        public void MoveLeft()
+        public void MoveLeft(int speed)
         {
             throw new NotImplementedException();
         }
 
-        public void MoveRight()
+        public void MoveRight(int speed)
         {
             throw new NotImplementedException();
         }
 
-        public void MoveUp()
+        public void MoveUp(int speed)
         {
             throw new NotImplementedException();
         }
