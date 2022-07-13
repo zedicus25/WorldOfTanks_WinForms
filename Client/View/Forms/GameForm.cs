@@ -28,15 +28,18 @@ namespace Client.View.Forms
             this.DoubleBuffered = true;
             _drawTask = new Task(Draw);
             _drawTask.Start();
+
         }
 
         private void Draw()
         {
             while (true)
             {
-                tanl.Move(this.Width, 0, this.Height, 0);
+                tanl.Move(this.Width, this.Height);
                 _graphics.DrawImage(Properties.Resources.back, this.ClientRectangle);
                 _graphics.DrawImage(tanl.Sprite.Icon, new Point(tanl.Pos.X, tanl.Pos.Y));
+                if(tanl.Projectile.CanMove)
+                    _graphics.DrawImage(tanl.Projectile.Sprite.Icon, new Point(tanl.Projectile.Pos.X, tanl.Projectile.Pos.Y));
 
                 this.BackgroundImage = _bufferedImage;
                 this.Invalidate();
@@ -44,6 +47,11 @@ namespace Client.View.Forms
 
             }
             
+        }
+
+        private void GameForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            tanl.SetUserInput(e.KeyCode);
         }
     }
 }
