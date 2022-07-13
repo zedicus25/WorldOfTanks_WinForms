@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Directions\DownDirection.cs" />
+    <Compile Include="Model\Directions\IDirection.cs" />
+    <Compile Include="Model\Directions\LeftDirection.cs" />
+    <Compile Include="Model\Directions\RightDirection.cs" />
+    <Compile Include="Model\Directions\UpDirection.cs" />
+    <Compile Include="Model\IMovable.cs" />
+    <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\Projectile.cs" />
+    <Compile Include="Model\Tank.cs" />
     <Compile Include="View\Forms\GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
