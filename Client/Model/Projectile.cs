@@ -84,6 +84,7 @@ namespace Client.Model
             CanMove = false;
         }
 
+        #region Moving
         public void Move(int maxX, int maxY)
         {
             if (CanMove)
@@ -132,5 +133,6 @@ namespace Client.Model
         {
             Pos.Y -= speed;
         }
+        #endregion
     }
 }
