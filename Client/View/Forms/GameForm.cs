@@ -1,4 +1,5 @@
-﻿using Client.Model;
+﻿using Client.Controller;
+using Client.Model;
 using Client.Model.Directions;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,11 @@ namespace Client.View.Forms
         private Bitmap _bufferedImage;
         private Task _drawTask;
         Tank tanl;
+        MyClientController cl;
         public GameForm()
         {
             InitializeComponent();
+            cl = new MyClientController();
             _bufferedImage = new Bitmap(this.Width, this.Height);
             _graphics = Graphics.FromImage(_bufferedImage);
             tanl = new Tank(new Position(50, 50), "123", "tank.png", new DownDirection(), 10);

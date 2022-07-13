@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MyClientController.cs" />
     <Compile Include="Model\Directions\DownDirection.cs" />
     <Compile Include="Model\Directions\IDirection.cs" />
     <Compile Include="Model\Directions\LeftDirection.cs" />
@@ -102,9 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\tile_73.png" />
   </ItemGroup>
